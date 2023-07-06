@@ -1,17 +1,37 @@
+.inputAndButtonContainer {
+  /* border: 2px solid red; */
+  width: 600px;
+  height: 100px;
+  margin-top: 100px;
+  margin-left: 50px;
+}
+
 .addTaskButton {
   width: 80px;
   height: 35px;
-  border-radius: 7px;
+  border-radius: 0px 7px 7px 0px;
   font-family: 'Archivo', sans-serif;
-  background-color: #e4d9ff;
+  /* background-color: #e4d9ff; */
+  background-color: #8a62d3;
   border: none;
-  margin-top: 50px;
-  margin-left: 50px;
   cursor: pointer;
 }
 
+.addTaskText {
+  font-weight: bold;
+  color: whitesmoke;
+}
+
 .addTaskButton:hover {
-  opacity: 0.8;
-  background-color: ghostwhite;
-  border: 0.5px solid black;
+  opacity: 0.6;
+  background-color: #8a62d3;
+  border: 0px 5px 5px 5px solid #8a62d3;
+}
+
+.input {
+  width: 200px;
+  height: 35px;
+  border: 1.5px solid #8a62d3;
+  border-radius: 7px 0px 0px 7px;
+  padding-left: 10px;
 }
