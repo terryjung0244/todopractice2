@@ -1,0 +1,17 @@
+.addTaskButton {
+  width: 80px;
+  height: 35px;
+  border-radius: 7px;
+  font-family: 'Archivo', sans-serif;
+  background-color: #e4d9ff;
+  border: none;
+  margin-top: 50px;
+  margin-left: 50px;
+  cursor: pointer;
+}
+
+.addTaskButton:hover {
+  opacity: 0.8;
+  background-color: ghostwhite;
+  border: 0.5px solid black;
+}
