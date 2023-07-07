@@ -7,15 +7,12 @@ import {
   sendEachTodoIdAction,
   updateTodoAction,
 } from 'service/redux/action/todoAction';
-import { TODO_CONST_ACTIONS } from 'service/const/constAction';
 import Modal from '@mui/joy/Modal';
 import ModalClose from '@mui/joy/ModalClose';
 import Typography from '@mui/joy/Typography';
 import Sheet from '@mui/joy/Sheet';
 import { CreateInputType } from 'components/createTodo/CreateTodo';
 import { format } from 'date-fns';
-
-const {} = TODO_CONST_ACTIONS;
 
 const ShowTodo = () => {
   const dispatch = useAppDispatch();
@@ -52,6 +49,8 @@ const ShowTodo = () => {
     );
   };
 
+  console.log(todoList);
+
   return (
     <div className="showTodoMain">
       {todoList.map((todo: TodoType) => {
@@ -64,7 +63,9 @@ const ShowTodo = () => {
                     {/* <input className="checkBoxContainer" type="checkbox" checked={false} />
                     {todo.id} */}
                   </div>
-                  <div>{todo.title}</div>
+                  <div style={{ textDecoration: todo.isDone ? 'line-through' : 'unset' }}>
+                    {todo.title}
+                  </div>
                   <div>{todo.date}</div>
                 </div>
                 <div style={{ display: 'flex' }}>

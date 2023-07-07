@@ -1,8 +1,10 @@
 import { AnyAction } from '@reduxjs/toolkit';
 import { TODO_CONST_ACTIONS } from 'service/const/constAction';
+import { SELECT_CONST } from 'service/const/selectConst';
 import { TodoType } from 'service/model/todo';
 
 const { CREATE_TODO, DELETE_TODO, UPDATE_TODO, SEND_EACH_ID_TODO } = TODO_CONST_ACTIONS;
+const { SELECT_COMPLETED, SELECT_INCOMPLETED } = SELECT_CONST;
 
 export interface CreateTodoActionReturnType {
   type: typeof CREATE_TODO;
@@ -24,9 +26,21 @@ export interface SendEachTodoIdActionReturnType {
   payload: string;
 }
 
+export interface SelectOptionForCompleteReturnType {
+  type: typeof SELECT_COMPLETED;
+  payload: null;
+}
+
+export interface SelectOptionForInCompleteReturnType {
+  type: typeof SELECT_COMPLETED;
+  payload: null;
+}
+
 export type TodoActionsType =
   | CreateTodoActionReturnType
   | DeleteTodoActionReturnType
   | SendEachTodoIdActionReturnType
   | SendEachTodoIdActionReturnType
+  | SelectOptionForCompleteReturnType
+  | SelectOptionForInCompleteReturnType
   | AnyAction;

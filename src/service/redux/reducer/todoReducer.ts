@@ -6,7 +6,8 @@ import { TodoActionsType } from '../action/todo.interface';
 import { TODO_CONST_ACTIONS } from 'service/const/constAction';
 import { TodoType } from 'service/model/todo';
 
-const { CREATE_TODO, DELETE_TODO, UPDATE_TODO, SEND_EACH_ID_TODO } = TODO_CONST_ACTIONS;
+const { CREATE_TODO, DELETE_TODO, UPDATE_TODO, SEND_EACH_ID_TODO, SELECT_COMPLETE_TODO } =
+  TODO_CONST_ACTIONS;
 
 const initialState: TodoReducerState = {
   todoList: [],
@@ -44,6 +45,17 @@ export const todoReducer: Reducer<TodoReducerState, TodoActionsType> = (
         draft.todoList[indexResultForUpdate].title = title;
         draft.todoList[indexResultForUpdate].date = date;
         draft.selectedIdList = [];
+        break;
+
+      case SELECT_COMPLETE_TODO:
+        const resultForComplete = draft.todoList.map((todo: TodoType) => {
+          if (draft.selectedIdList.includes(todo.id)) {
+            return { ...todo, isDone: true };
+          } else {
+            return { ...todo };
+          }
+        });
+        draft.todoList = resultForComplete;
         break;
 
       default:
