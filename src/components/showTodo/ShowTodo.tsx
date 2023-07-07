@@ -72,9 +72,11 @@ const ShowTodo = () => {
                   <div className="button" onClick={deleteTodo}>
                     Delete
                   </div>
-                  <div style={{ marginLeft: '10px' }} className="button" onClick={updateTodo}>
-                    Update
-                  </div>
+                  {todo.isDone ? null : (
+                    <div style={{ marginLeft: '10px' }} className="button" onClick={updateTodo}>
+                      Update
+                    </div>
+                  )}
                 </div>
               </div>
             )}

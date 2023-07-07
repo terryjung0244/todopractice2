@@ -8,7 +8,6 @@ import {
   SendEachTodoIdActionReturnType,
   UpdateTodoActionReturnType,
 } from './todo.interface';
-import { SELECT_CONST } from 'service/const/selectConst';
 
 const {
   CREATE_TODO,
