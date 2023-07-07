@@ -1,0 +1,78 @@
+.showTodoMain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* border: 2px solid red; */
+  margin-top: 50px;
+  font-weight: normal;
+}
+
+.todoListContainer {
+  margin-top: 15px;
+  width: 500px;
+  height: 120px;
+  border: 2px solid #8a62d3;
+  background-color: ghostwhite;
+  border-radius: 10px;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 15px;
+  /* border: 2px solid red; */
+}
+
+.button {
+  width: 65px;
+  height: 25px;
+  background-color: #8a62d3;
+  color: ghostwhite;
+  font-size: 13px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 7px;
+  margin-top: 10px;
+}
+
+.checkBoxContainer {
+  width: 16px;
+  height: 16px;
+  accent-color: #ff90b3;
+  margin-right: 5px;
+}
+
+.todolistcontainer:hover {
+  opacity: 0.6;
+  background-color: red;
+}
+
+.updateInputContainer {
+  width: 250px;
+  height: 30px;
+  padding: 5px;
+  border: 1.5px solid #8a62d3;
+  border-radius: 7px 0px 0px 7px;
+}
+
+.updateButton {
+  width: 70px;
+  height: 30px;
+  border: 10px solid #8a62d3;
+  border-radius: 0px 7px 7px 0px;
+  background-color: #8a62d3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: ghostwhite;
+  font-weight: bold;
+}
+
+.updateAndButtonContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

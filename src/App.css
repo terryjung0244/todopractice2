@@ -9,8 +9,9 @@
 
 .appSub {
   width: 600px;
-  height: 400px;
+  height: 850px;
   border-radius: 10px;
   /* border: 2px solid red; */
   background-color: ghostwhite;
+  position: relative;
 }
