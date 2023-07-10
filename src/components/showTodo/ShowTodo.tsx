@@ -49,7 +49,7 @@ const ShowTodo = () => {
     );
   };
 
-  console.log(todoList);
+  console.log(selectedIdList);
 
   return (
     <div className="showTodoMain">
@@ -57,7 +57,11 @@ const ShowTodo = () => {
         return (
           <div key={todo.id}>
             {todo.id.length > 5 && (
-              <div className="todoListContainer" onClick={() => showTodo(todo.id)}>
+              <div
+                className="todoListContainer"
+                onClick={() => showTodo(todo.id)}
+                style={{ backgroundColor: selectedIdList.includes(todo.id) ? '#BFC8EA' : 'unset' }}
+              >
                 <div>
                   <div>
                     {/* <input className="checkBoxContainer" type="checkbox" checked={false} />
